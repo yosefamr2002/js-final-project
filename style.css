@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+body{
+    height: 100vh;
+    background-color: #f2f4f7;
+    
+}
+.title {
+    text-align: center;
+    width: 100%;
+    margin-top: 45px;
+}
+.title h1{
+    color: #106bff;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+
+}
+
+.container__title{
+        text-align: center;
+
+}
+.container__form {
+    background-color: #ffffff;
+    margin: auto;
+    box-shadow: 0 0px 9px 0px rgba(0, 0, 0, 0.2);
+    width: 25rem;
+    text-align: center;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 10px solid black; */
+    padding: 1rem
+16px
+ 1rem;
+    border-radius: 6px;
+}
+.container__form__header {
+    margin: 20px 0px;
+    /* padding: 14px; */
+    text-align: center;
+}
+.container__form__header p {
+    font-size: 18px;
+}
+
+.inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+input {
+    margin-bottom: 15px;
+    border: 1px solid #00000029;
+    padding: 14px 16px;
+    height: 55px;
+    border-radius: 6px;
+    /* margin: 5px 0; */
+}
+input::placeholder {
+  font-size: 18px; 
+}
+.login_btn{
+    color: white;
+    text-decoration: none;
+    background-color: #1877f2;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 48px;
+    padding: 0 16px;
+    width: 100%;
+}
+.Forgotten_link {
+    font-size: 14px;
+    margin: 18px 0px;
+    text-decoration: none;
+    color: #3c77f4;
+}
+.hr-with-or {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #0000003a;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    position: relative;
+}
+.hr-with-or span {
+  background: #fff; /* لازم تكون نفس لون الخلفية */
+  padding: 0 15px; /* هنا بتديها margin جوهيا */
+  font-size: 10px;
+  color: #333333a1;
+  font-weight: bold;
+  position: relative;
+  top: 0.6em; /* علشان تنزل على الخط وتقطعه */
+}
+
+
+.create_btn{
+      text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    margin: 10px 0px;
+    background-color: #42b72a;
+    border-radius: 6px;
+    width: 60%;
+    color: white;
+}
+
+@media (max-width: 400px) {
+  .container {
+   .container__form{
+    width: 20rem;
+   }
+  }
+}
