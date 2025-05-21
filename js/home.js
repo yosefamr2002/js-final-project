@@ -1,4 +1,4 @@
-  const newpost_input = document.querySelector(".newpost_input");
+  const newpost_input = document.querySelector(".newposts");
   const postPopup = document.getElementById("postPopup");
   const closePopup = document.getElementById("closePopup");
 
