@@ -279,9 +279,21 @@ nav {
     cursor: pointer;
 }
 
+.post-card {
+    margin-top: 15px;
+    background-color: var(--second-color);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 12px;
+}
+.post-card hr {
+    margin: 10px 0px;
+}
 
-
-
+.post-card p {
+    font-weight: normal;
+}
 
 
 

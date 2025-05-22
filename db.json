@@ -19,6 +19,25 @@
       "password": "1234"
     }
   ],
-  "posts": [],
+  "posts": [
+    {
+      "id": "485b",
+      "content": "sadad",
+      "author": "allaa amr",
+      "date": "5/22/2025, 2:05:04 PM"
+    },
+    {
+      "id": "7b28",
+      "content": "iam playing now",
+      "author": "allaa amr",
+      "date": "5/22/2025, 2:18:15 PM"
+    },
+    {
+      "id": "fe48",
+      "content": "iam working now",
+      "author": "Youssef Amr",
+      "date": "5/22/2025, 2:19:36 PM"
+    }
+  ],
   "comments": []
 }
