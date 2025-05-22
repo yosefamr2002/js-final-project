@@ -9,23 +9,26 @@ form.addEventListener("submit", function (event) {
   const password = document.getElementById("password").value;
   const username = fname + " " + lname;
 
-  // استدعاء الفانكشن
+  // run the function
   signUp(username, email, password);
 });
 
 
 
 function signUp(username, email, password) {
-  // أبدأ طلب جديد باستخدام XMLHttpRequest
+  // XMLHttpRequest
   const req = new XMLHttpRequest();
   req.open("POST", "http://localhost:3000/users");
   req.setRequestHeader("Content-Type", "application/json");
 
-  // لما السيرفر يرد
+  
   req.onload = function () {
+
+    //201 mean acount created 
     if (req.status === 201) {
-      alert("تم إنشاء الحساب بنجاح!");
-      window.location.href = "../index.html"; // رجّع المستخدم لصفحة الدخول
+      alert("account created");
+      //get back the user to login page
+      window.location.href = "../index.html"; 
     }
   };
 

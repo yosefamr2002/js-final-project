@@ -1,3 +1,16 @@
+// check if user loged in or not
+const loggedInUser = localStorage.getItem("loggedInUser");
+if (loggedInUser) {
+  window.location.href = "pages/home.html";
+}
+
+
+
+///////////////////////////////////////////////////
+
+// main code to login & add data to server
+const loginForm = document.getElementById("loginForm");
+
 loginForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -10,23 +23,31 @@ loginForm.addEventListener("submit", function (event) {
     if (req.status === 200) {
       const users = JSON.parse(req.responseText);
 
-      const user = users.find(u => u.email === email && u.password === password);
+      
+      // Find the user in the database whose email and password match the input
+      const user = users.find(function (u) {
+        return u.email === email && u.password === password;
+      });
 
+      // if i found him
       if (user) {
         console.log("login successful");
-        
-        // يحول المستخدم للصفحة الرئيسية
-        window.location.href = "pages/home.html"; 
-      } else {
-        alert("Email or passord is invalid");
+
+        // save login data at localStorage
+        localStorage.setItem("loggedInUser", JSON.stringify(user));
+
+        //go to home page
+        window.location.href = "pages/home.html";
+      } 
+      // if i not found him in database or server
+      else {
+        alert("Email or password is invalid");
       }
-    } else {
+    } 
+    //if server not response or error in network
+    else {
       alert("error in server");
     }
-  };
-
-  req.onerror = function () {
-    alert("error in server");
   };
 
   req.send();

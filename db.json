@@ -5,6 +5,18 @@
       "username": "Youssef Amr",
       "email": "test@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "34f0",
+      "username": "allaa amr",
+      "email": "allaa@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "9927",
+      "username": "omar omar",
+      "email": "omarmagdy@gmail.com",
+      "password": "1234"
     }
   ],
   "posts": [],

@@ -38,16 +38,25 @@
             <i class="fa-solid fa-gamepad"></i>
         </div>
 
-        <!-- right  -->
+        <!-- right -->
         <div class="nav__user">
             <div class="icon">
                 <i class="fa-solid fa-bars"></i>
                 <i class="fa-brands fa-facebook-messenger"></i>
                 <i class="fa-solid fa-bell"></i>
             </div>
-            <div class="userphoto">
 
-                <img src="../assets/images/profile.png" alt="">
+            <!-- صورة البروفايل والمنيو -->
+            <div class="user-menu-container">
+                <img src="../assets/images/userphoto.png" alt="User" class="user-img" id="user-img" />
+                <div class="dropdown-menu" id="dropdown-menu">
+                    <ul>
+                        <li id="nameofuser"></li>
+                        <li><a href="#">account</a></li>
+                        <li><a href="#">settings</a></li>
+                        <li><a href="#" id="logout-btn">log out</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -69,23 +78,32 @@
 
                         <div class="userphoto">
 
-                            <img src="../assets/images/profile.png" alt="">
+                            <img src="../assets/images/userphoto.png" alt="">
                         </div>
                         <input class="newpost_input" type="text" placeholder="what is on your mind ?">
-                        
+
                     </div>
                     <hr>
                     <div class="newpost__icons">
                         <div class="icon">
-                            <img src="../assets/images/video-camera-alt 1.png" alt="">
+                            <div class="newpost__icons__img">
+
+                                <img src="../assets/images/video-camera-alt 1.png" alt="">
+                            </div>
                             <h4>Live Video</h4>
                         </div>
                         <div class="icon">
-                            <img src="../assets/images/Group 22.png" alt="">
+                            <div class="newpost__icons__img">
+
+                                <img src="../assets/images/Group 22.png" alt="">
+                            </div>
                             <h4>Photo/Video</h4>
                         </div>
                         <div class="icon">
-                            <img src="../assets/images/happy emoji.png" alt="">
+                            <div class="newpost__icons__img">
+
+                                <img src="../assets/images/happy emoji.png" alt="">
+                            </div>
                             <h4>Feeling/activity</h4>
                         </div>
                     </div>
@@ -103,20 +121,20 @@
     </main>
 
     <!-- ====== Popup Modal ====== -->
-<div class="popup-overlay" id="postPopup">
-  <div class="popup-card">
-    <span class="close-btn" id="closePopup">&times;</span>
-    <h3>Create Post</h3>
-    <textarea id="postContent" rows="6" placeholder="What's on your mind?"></textarea>
-    <button id="submitPost">Post</button>
-  </div>
-</div>
+    <div class="popup-overlay" id="postPopup">
+        <div class="popup-card">
+            <span class="close-btn" id="closePopup">&times;</span>
+            <h3>Create Post</h3>
+            <textarea id="postContent" rows="6" placeholder="What's on your mind?"></textarea>
+            <button id="submitPost">Post</button>
+        </div>
+    </div>
 
 
 
 
 
-<script src="../js/home.js"></script>
+    <script src="../js/home.js"></script>
 </body>
 
 </html>
