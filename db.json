@@ -7,36 +7,37 @@
       "password": "1234"
     },
     {
-      "id": "34f0",
-      "username": "allaa amr",
-      "email": "allaa@gmail.com",
-      "password": "1234"
-    },
-    {
       "id": "9927",
       "username": "omar omar",
       "email": "omarmagdy@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "d350",
+      "username": "abdo samir",
+      "email": "abdosamir123@gmail",
+      "password": "abdosamir123"
+    },
+    {
+      "id": "bad4",
+      "username": "es am",
+      "email": "es@msn.com",
+      "password": "1234567890"
     }
   ],
   "posts": [
     {
-      "id": "485b",
-      "content": "sadad",
-      "author": "allaa amr",
-      "date": "5/22/2025, 2:05:04 PM"
-    },
-    {
-      "id": "7b28",
-      "content": "iam playing now",
-      "author": "allaa amr",
-      "date": "5/22/2025, 2:18:15 PM"
-    },
-    {
-      "id": "fe48",
-      "content": "iam working now",
+      "id": "574a",
+      "content": "good day",
       "author": "Youssef Amr",
-      "date": "5/22/2025, 2:19:36 PM"
+      "date": "5/25/2025, 9:48:05 PM",
+      "comments": [
+        {
+          "author": "Youssef Amr",
+          "content": "yes",
+          "date": "5/25/2025, 9:48:13 PM"
+        }
+      ]
     }
   ],
   "comments": []

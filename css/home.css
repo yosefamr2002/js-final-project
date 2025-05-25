@@ -272,30 +272,80 @@ nav {
 .popup-card button {
     margin-top: 15px;
     padding: 10px 20px;
-    background-color: #1877f2;
+    background-color: var(--blue-color);
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-.post-card {
-    margin-top: 15px;
-    background-color: var(--second-color);
+.popup-card button:hover {
+    background-color: #0753d7;
+}
+
+
+
+/* posts  */
+
+
+.fb-post {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fb-post-header {
     display: flex;
-    flex-direction: column;
-    padding: 10px;
-    border-radius: 12px;
-}
-.post-card hr {
-    margin: 10px 0px;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-.post-card p {
-    font-weight: normal;
+.user-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info h4 {
+    margin: 0;
+    font-size: 16px;
 }
 
 
+
+.fb-post-content {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.fb-post-actions {
+    padding: 10px 0px;
+    display: flex
+;
+    justify-content: space-around;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    margin: 10px;
+}
+.fb-post-actions button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #555;
+    transition: 0.2s ease;
+}
+
+.fb-post-actions button:hover {
+    color: #0866ff;
+}
 
 
 
