@@ -29,6 +29,9 @@ body{
         text-align: center;
 
 }
+.logo img{
+    width: 5rem;
+}
 .container__form {
     background-color: #ffffff;
     margin: auto;
@@ -120,6 +123,23 @@ input::placeholder {
     width: 60%;
     color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 400px) {
   .container {

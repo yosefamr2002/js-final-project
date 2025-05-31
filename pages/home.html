@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="icon" type="image/x-icon" href="../assets/images/facebookfavicon.png">
+    <link rel="icon" type="image/x-icon" href="../assets/images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,7 +21,7 @@
 
         <!-- left  -->
         <div class="nav__logo_search">
-            <div class="logo"><img src="../assets/images/facebook 1.png" alt=""></div>
+            <div class="logo"><img src="../assets/images/logo.png" alt=""></div>
             <div class="searchbox">
 
                 <input class="search" type="text" placeholder="search">
@@ -64,7 +64,53 @@
 
     <main class="main_content">
 
-        <section class="left"></section>
+        <section class="left">
+            <div class="sidebar">
+                <!-- User Profile -->
+                <div class="sidebar-item">
+                    <img src="https://via.placeholder.com/32" alt="Profile" class="profile">
+                    <span>Youssef Amr</span>
+                </div>
+
+                <!-- Items -->
+                
+                <div class="sidebar-item">
+                    <img src="https://img.icons8.com/color/48/friends--v1.png" class="icon" alt="Friends">
+                    <span>Friends</span>
+                </div>
+
+                <div class="sidebar-item">
+                    <img src="https://img.icons8.com/ios-filled/50/bookmark-ribbon--v1.png" class="icon" alt="Saved">
+                    <span>Saved</span>
+                </div>
+
+                <div class="sidebar-item">
+                    <img src="https://img.icons8.com/fluency/48/time-machine.png" class="icon" alt="Memories">
+                    <span>Memories</span>
+                </div>
+
+                <div class="sidebar-item">
+                    <img src="https://img.icons8.com/color/48/groups.png" class="icon" alt="Groups">
+                    <span>Groups</span>
+                </div>
+
+                <div class="sidebar-item">
+                    <img src="https://img.icons8.com/fluency/48/youtube-play.png" class="icon" alt="Reels">
+                    <span>Reels</span>
+                </div>
+
+                <div class="sidebar-item">
+                    <img src="https://img.icons8.com/fluency/48/market-square.png" class="icon" alt="Marketplace">
+                    <span>Marketplace</span>
+                </div>
+
+                <div class="sidebar-item see-more">
+                    <img src="https://img.icons8.com/ios-glyphs/30/expand-arrow--v1.png" class="icon" alt="See more">
+                    <span>See more</span>
+                </div>
+            </div>
+
+        </section>
 
 
 
@@ -118,7 +164,20 @@
             </div>
 
         </section>
-        <section class="right"></section>
+
+
+        <section class="right">
+
+            <!-- chat  -->
+            <div class="chat-container">
+                <div class="chat-header">Gemini Chat</div>
+                <div class="chat-messages" id="chat-messages"></div>
+                <div class="chat-input">
+                    <input type="text" id="chat-input" placeholder="type your message here..." />
+                    <button onclick="sendMessage()">send</button>
+                </div>
+            </div>
+        </section>
 
 
     </main>
@@ -133,7 +192,7 @@
         </div>
     </div>
 
-    
+
 
 
 
