@@ -29,6 +29,42 @@
       "username": "omar ahmed",
       "email": "omar@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "3424",
+      "username": "mohamed salem",
+      "email": "mohamedsalem@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "defa",
+      "username": "marwan khaled",
+      "email": "marwankhaled@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "fdf2",
+      "username": "moustafa selim",
+      "email": "moustafaselim@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "0200",
+      "username": "amr ashraf",
+      "email": "amrashraf@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "fd56",
+      "username": "amr ashraf",
+      "email": "amrashraf@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "6cf0",
+      "username": "fawaz allaa",
+      "email": "fawaz@gmail.com",
+      "password": "1234"
     }
   ],
   "posts": [
@@ -52,23 +88,10 @@
       "date": "5/31/2025, 8:31:45 PM"
     },
     {
-      "id": "cce5",
-      "content": "refresh testing",
-      "author": "Youssef Amr",
-      "date": "6/1/2025, 12:30:33 AM"
-    },
-    {
-      "id": "1685",
-      "content": "hi for every one",
-      "author": "omar ahmed",
-      "date": "6/1/2025, 12:57:49 AM",
-      "comments": [
-        {
-          "author": "Youssef Amr",
-          "content": "welcome",
-          "date": "6/1/2025, 12:58:09 AM"
-        }
-      ]
+      "id": "3833",
+      "content": "hi every one",
+      "author": "fawaz allaa",
+      "date": "6/1/2025, 5:57:25 PM"
     }
   ],
   "comments": []

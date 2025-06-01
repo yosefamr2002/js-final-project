@@ -18,7 +18,7 @@ loginForm.addEventListener("submit", function (event) {
   const password = document.getElementById("password").value;
 
   const req = new XMLHttpRequest();
-  req.open("GET", "http://localhost:3000/users");
+  req.open("GET", "https://stream-surf-airport.glitch.me/users");
   req.onload = function () {
     if (req.status === 200) {
       const users = JSON.parse(req.responseText);

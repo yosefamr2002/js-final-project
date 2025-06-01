@@ -18,7 +18,7 @@ form.addEventListener("submit", function (event) {
 function signUp(username, email, password) {
   // XMLHttpRequest
   const req = new XMLHttpRequest();
-  req.open("POST", "http://localhost:3000/users");
+  req.open("POST", "https://stream-surf-airport.glitch.me/users");
   req.setRequestHeader("Content-Type", "application/json");
 
   
@@ -26,13 +26,13 @@ function signUp(username, email, password) {
 
     //201 mean acount created 
     if (req.status === 201) {
-      alert("account created");
       //get back the user to login page
       window.location.href = "../index.html"; 
+      alert("account created go back to sign in");
     }
   };
 
-  // أرسل البيانات
+//send data
   const data = JSON.stringify({ username, email, password });
   req.send(data);
 }

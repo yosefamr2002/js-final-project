@@ -71,7 +71,7 @@ document.getElementById("submitPost").addEventListener("click", function () {
   };
 
   const req = new XMLHttpRequest();
-  req.open("POST", "http://localhost:3000/posts", true);
+  req.open("POST", "https://stream-surf-airport.glitch.me/posts", true);
   req.setRequestHeader("Content-Type", "application/json");
 
   req.onload = function () {
@@ -88,7 +88,7 @@ document.getElementById("submitPost").addEventListener("click", function () {
 // show posts
 function fetchPosts() {
   var req = new XMLHttpRequest();
-  req.open("GET", "http://localhost:3000/posts", true);
+  req.open("GET", "https://stream-surf-airport.glitch.me/posts", true);
 
   req.onload = function () {
     if (req.status === 200) {
@@ -110,6 +110,9 @@ function fetchPosts() {
               "<p><b>" + comment.author + ":</b> " + comment.content + "</p>";
           }
         }
+console.log(post);
+console.log(loggedInUser);
+
 
         postElement.innerHTML = `
         <div class= "container">
@@ -122,12 +125,16 @@ function fetchPosts() {
     </div>
     <div class="fb-post-content">
       <p>${post.content}</p>
-    </div>
+    </div>    
     <div class="fb-post-actions">
       <button class="comment-btn" data-postid="${post.id}"> Comment</button>
-      <button class="edit-btn" data-postid="${post.id}"> Edit</button>
-      <button class="delete-btn" data-postid="${post.id}"> Delete</button>
-    </div>
+      ${
+        post.author == JSON.parse(loggedInUser).username
+          ? `   <button class="edit-btn" data-postid="${post.id}"> Edit</button>
+        <button class="delete-btn" data-postid="${post.id}"> Delete</button>`
+          : ""
+      }
+      </div>
     <div class="comments-container">
       ${commentsHTML}
     </div>
@@ -175,7 +182,11 @@ function fetchPosts() {
           var commentDate = new Date().toLocaleString();
 
           var getReq = new XMLHttpRequest();
-          getReq.open("GET", "http://localhost:3000/posts/" + postId, true);
+          getReq.open(
+            "GET",
+            "https://stream-surf-airport.glitch.me/posts/" + postId,
+            true
+          );
           getReq.onload = function () {
             if (getReq.status === 200) {
               var post = JSON.parse(getReq.responseText);
@@ -192,7 +203,7 @@ function fetchPosts() {
               var patchReq = new XMLHttpRequest();
               patchReq.open(
                 "PATCH",
-                "http://localhost:3000/posts/" + postId,
+                "https://stream-surf-airport.glitch.me/posts/" + postId,
                 true
               );
               patchReq.setRequestHeader("Content-Type", "application/json");
@@ -245,7 +256,10 @@ function fetchPosts() {
 
             // Create PATCH request to update the post
             var xhr = new XMLHttpRequest();
-            xhr.open("PATCH", "http://localhost:3000/posts/" + postId);
+            xhr.open(
+              "PATCH",
+              "https://stream-surf-airport.glitch.me/posts/" + postId
+            );
             xhr.setRequestHeader("Content-Type", "application/json");
 
             // When request is done
@@ -274,7 +288,11 @@ function fetchPosts() {
           var postId = this.getAttribute("data-postid");
 
           var delReq = new XMLHttpRequest();
-          delReq.open("DELETE", "http://localhost:3000/posts/" + postId, true);
+          delReq.open(
+            "DELETE",
+            "https://stream-surf-airport.glitch.me/posts/" + postId,
+            true
+          );
           delReq.onload = function () {
             if (delReq.status === 200) {
               fetchPosts();
@@ -373,22 +391,22 @@ async function generateResponse(userMessage) {
 }
 
 //open and close it
- function toggleChat() {
-        const chatBox = document.getElementById("chat-box");
-        const toggleButton = document.getElementById("chat-toggle");
+function toggleChat() {
+  const chatBox = document.getElementById("chat-box");
+  const toggleButton = document.getElementById("chat-toggle");
 
-        if (chatBox.style.display === "none" || chatBox.style.display === "") {
-            // Show chat and hide toggle button
-            chatBox.style.display = "flex";
-            toggleButton.style.display = "none";
-        } else {
-            // Hide chat and show toggle button
-            chatBox.style.display = "none";
-            toggleButton.style.display = "flex";
-        }
-    }
+  if (chatBox.style.display === "none" || chatBox.style.display === "") {
+    // Show chat and hide toggle button
+    chatBox.style.display = "flex";
+    toggleButton.style.display = "none";
+  } else {
+    // Hide chat and show toggle button
+    chatBox.style.display = "none";
+    toggleButton.style.display = "flex";
+  }
+}
 
-    // Optional: hide chat by default on page load
-    window.onload = function () {
-        document.getElementById("chat-box").style.display = "none";
-    };
+// hide chat by default on page load
+window.onload = function () {
+  document.getElementById("chat-box").style.display = "none";
+};
