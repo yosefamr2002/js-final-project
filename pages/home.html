@@ -73,7 +73,7 @@
                 </div>
 
                 <!-- Items -->
-                
+
                 <div class="sidebar-item">
                     <img src="https://img.icons8.com/color/48/friends--v1.png" class="icon" alt="Friends">
                     <span>Friends</span>
@@ -115,67 +115,92 @@
 
 
         <section class="center">
+            <div class="container">
+                <!-- <div class="content"> -->
+                <div class="newposts">
 
-
-            <div class="newposts">
-
-                <div class="container">
                     <div class="addpost">
-
                         <div class="userphoto">
-
                             <img src="../assets/images/userphoto.png" alt="">
                         </div>
                         <input class="newpost_input" type="text" placeholder="what is on your mind ?">
 
                     </div>
                     <hr>
+
                     <div class="newpost__icons">
                         <div class="icon">
                             <div class="newpost__icons__img">
-
-                                <img src="../assets/images/video-camera-alt 1.png" alt="">
+                                <!-- <img src="../assets/images/video-camera-alt 1.png" alt=""> -->
+                                <i class="fa-solid fa-video"></i>
                             </div>
-                            <h4>Live Video</h4>
+                            <div class="text">
+                                <h4>Live Video</h4>
+                            </div>
                         </div>
                         <div class="icon">
                             <div class="newpost__icons__img">
-
-                                <img src="../assets/images/Group 22.png" alt="">
+                                <!-- <img src="../assets/images/Group 22.png" alt=""> -->
+                                <i class="fa-solid fa-image"></i>
                             </div>
-                            <h4>Photo/Video</h4>
+                            <div class="text">
+
+                                <h4>Photo/Video</h4>
+                            </div>
                         </div>
                         <div class="icon">
                             <div class="newpost__icons__img">
-
-                                <img src="../assets/images/happy emoji.png" alt="">
+                                <!-- <img src="../assets/images/happy emoji.png" alt=""> -->
+                                <i class="fa-solid fa-face-smile"></i>
                             </div>
-                            <h4>Feeling/activity</h4>
+                            <div class="text">
+
+                                <h4>Feeling/activity</h4>
+                            </div>
                         </div>
                     </div>
 
-
                 </div>
-
-
-                <!-- were i show the posts from server  -->
-                <div id="postsContainer"></div>
-
             </div>
+
+
+
+            <!-- </div> -->
+            <!-- were i show the posts from server  -->
+            <div id="postsContainer"></div>
 
         </section>
 
 
         <section class="right">
+            <div class="container">
 
-            <!-- chat  -->
-            <div class="chat-container">
-                <div class="chat-header">Gemini Chat</div>
-                <div class="chat-messages" id="chat-messages"></div>
-                <div class="chat-input">
-                    <input type="text" id="chat-input" placeholder="type your message here..." />
-                    <button onclick="sendMessage()">send</button>
+
+                <!-- chat  -->
+                <!-- <div class="chat-container ">
+                    <div class="chat-header">Gemini Chat</div>
+                    <div class="chat-messages" id="chat-messages"></div>
+                    <div class="chat-input">
+                        <input type="text" id="chat-input" placeholder="type your message here..." />
+                        <button onclick="sendMessage()">send</button>
+                    </div>
+                </div> -->
+                <!-- زر فتح الشات -->
+                <div id="chat-toggle" onclick="toggleChat()">💬</div>
+
+                <!-- chat -->
+                <div class="chat-container" id="chat-box" style="display: none;">
+                    <div class="chat-header">
+                        Gemini Chat
+                        <span onclick="toggleChat()" style="float: right; cursor: pointer;">×</span>
+                    </div>
+                    <div class="chat-messages" id="chat-messages"></div>
+                    <div class="chat-input">
+                        <input type="text" id="chat-input" placeholder="type your message here..." />
+                        <button onclick="sendMessage()">send</button>
+                    </div>
                 </div>
+
             </div>
         </section>
 

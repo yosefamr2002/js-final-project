@@ -23,6 +23,12 @@
       "username": "es am",
       "email": "es@msn.com",
       "password": "1234567890"
+    },
+    {
+      "id": "9986",
+      "username": "omar ahmed",
+      "email": "omar@gmail.com",
+      "password": "1234"
     }
   ],
   "posts": [
@@ -44,6 +50,25 @@
       "content": "testing my project",
       "author": "Youssef Amr",
       "date": "5/31/2025, 8:31:45 PM"
+    },
+    {
+      "id": "cce5",
+      "content": "refresh testing",
+      "author": "Youssef Amr",
+      "date": "6/1/2025, 12:30:33 AM"
+    },
+    {
+      "id": "1685",
+      "content": "hi for every one",
+      "author": "omar ahmed",
+      "date": "6/1/2025, 12:57:49 AM",
+      "comments": [
+        {
+          "author": "Youssef Amr",
+          "content": "welcome",
+          "date": "6/1/2025, 12:58:09 AM"
+        }
+      ]
     }
   ],
   "comments": []

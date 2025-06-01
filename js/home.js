@@ -112,6 +112,7 @@ function fetchPosts() {
         }
 
         postElement.innerHTML = `
+        <div class= "container">
   <div class="fb-post">
     <div class="fb-post-header">
       <img src="../assets/images/userphoto.png" alt="User Photo" class="user-img" />
@@ -134,6 +135,7 @@ function fetchPosts() {
       <input type="text" class="comment-input" placeholder="Write a comment..." />
       <button class="submit-comment-btn" data-postid="${post.id}">Add</button>
     </div>
+  </div>
   </div>
 `;
 
@@ -369,3 +371,24 @@ async function generateResponse(userMessage) {
     return "error try again ";
   }
 }
+
+//open and close it
+ function toggleChat() {
+        const chatBox = document.getElementById("chat-box");
+        const toggleButton = document.getElementById("chat-toggle");
+
+        if (chatBox.style.display === "none" || chatBox.style.display === "") {
+            // Show chat and hide toggle button
+            chatBox.style.display = "flex";
+            toggleButton.style.display = "none";
+        } else {
+            // Hide chat and show toggle button
+            chatBox.style.display = "none";
+            toggleButton.style.display = "flex";
+        }
+    }
+
+    // Optional: hide chat by default on page load
+    window.onload = function () {
+        document.getElementById("chat-box").style.display = "none";
+    };
