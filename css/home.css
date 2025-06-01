@@ -337,6 +337,30 @@ body {
     color: #0866ff;
 }
 
+/* ///comments ////  */
+.comment-input {
+    padding: 5px;
+    /* padding-left: 20px; */
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 41px;
+    width: 70%;
+    margin-left: 10px;
+}
+
+.submit-comment-btn {
+    border: none;
+    width: 20%;
+    color: white;
+    background-color: var(--blue-color);
+    padding: 5px;
+    border-radius: 2rem;
+}
+
+.add-comment {
+    width: 100%;
+    display: block;
+}
 
 
 
