@@ -360,10 +360,7 @@ async function generateResponse(userMessage) {
 
       // Check if the content and parts exist
       if (
-        firstCandidate.content &&
-        firstCandidate.content.parts &&
-        firstCandidate.content.parts.length > 0
-      ) {
+        firstCandidate.content &&firstCandidate.content.parts &&firstCandidate.content.parts.length > 0) {
         // Get the text from the first part
         let text = firstCandidate.content.parts[0].text;
 

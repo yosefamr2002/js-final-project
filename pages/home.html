@@ -18,17 +18,13 @@
 <body>
 
     <nav class="nav">
-
         <!-- left  -->
         <div class="nav__logo_search">
             <div class="logo"><img src="../assets/images/logo.png" alt=""></div>
             <div class="searchbox">
-
                 <input class="search" type="text" placeholder="search">
             </div>
-
         </div>
-
         <!-- center  -->
         <div class="nav__center_buttons"></i>
             <i class="fa-solid fa-house"></i>
@@ -37,7 +33,6 @@
             <i class="fa-solid fa-users"></i>
             <i class="fa-solid fa-gamepad"></i>
         </div>
-
         <!-- right -->
         <div class="nav__user">
             <div class="icon">
@@ -45,8 +40,6 @@
                 <i class="fa-brands fa-facebook-messenger"></i>
                 <i class="fa-solid fa-bell"></i>
             </div>
-
-            <!-- صورة البروفايل والمنيو -->
             <div class="user-menu-container">
                 <img src="../assets/images/userphoto.png" alt="User" class="user-img" id="user-img" />
                 <div class="dropdown-menu" id="dropdown-menu">
@@ -59,11 +52,9 @@
                 </div>
             </div>
         </div>
-
     </nav>
 
     <main class="main_content">
-
         <section class="left">
             <div class="sidebar">
                 <!-- User Profile -->
@@ -71,64 +62,50 @@
                     <img src="https://via.placeholder.com/32" alt="Profile" class="profile">
                     <span>Youssef Amr</span>
                 </div>
-
                 <!-- Items -->
-
                 <div class="sidebar-item">
                     <img src="https://img.icons8.com/color/48/friends--v1.png" class="icon" alt="Friends">
                     <span>Friends</span>
                 </div>
-
                 <div class="sidebar-item">
                     <img src="https://img.icons8.com/ios-filled/50/bookmark-ribbon--v1.png" class="icon" alt="Saved">
                     <span>Saved</span>
                 </div>
-
                 <div class="sidebar-item">
                     <img src="https://img.icons8.com/fluency/48/time-machine.png" class="icon" alt="Memories">
                     <span>Memories</span>
                 </div>
-
                 <div class="sidebar-item">
                     <img src="https://img.icons8.com/color/48/groups.png" class="icon" alt="Groups">
                     <span>Groups</span>
                 </div>
-
                 <div class="sidebar-item">
                     <img src="https://img.icons8.com/fluency/48/youtube-play.png" class="icon" alt="Reels">
                     <span>Reels</span>
                 </div>
-
                 <div class="sidebar-item">
                     <img src="https://img.icons8.com/fluency/48/market-square.png" class="icon" alt="Marketplace">
                     <span>Marketplace</span>
                 </div>
-
                 <div class="sidebar-item see-more">
                     <img src="https://img.icons8.com/ios-glyphs/30/expand-arrow--v1.png" class="icon" alt="See more">
                     <span>See more</span>
                 </div>
             </div>
-
         </section>
-
-
-
         <section class="center">
+            <!-- <div class="content"> -->
             <div class="container">
-                <!-- <div class="content"> -->
                 <div class="newposts">
                     <div class="addpost">
                         <div class="userphoto">
                             <img src="../assets/images/userphoto.png" alt="">
                         </div>
                         <input class="newpost_input" type="text" placeholder="what is on your mind ?">
-
                     </div>
                     <hr>
-
                     <div class="newpost__icons">
-                        <div class="icon">
+                        <div class="icon " id="icon_live">
                             <div class="newpost__icons__img">
                                 <!-- <img src="../assets/images/video-camera-alt 1.png" alt=""> -->
                                 <i class="fa-solid fa-video"></i>
@@ -143,8 +120,7 @@
                                 <i class="fa-solid fa-image"></i>
                             </div>
                             <div class="text">
-
-                                <h4>Photo/Video</h4>
+                                <h4>Photo/ Video</h4>
                             </div>
                         </div>
                         <div class="icon">
@@ -153,60 +129,49 @@
                                 <i class="fa-solid fa-face-smile"></i>
                             </div>
                             <div class="text">
-
-                                <h4>Feeling/activity</h4>
+                                <h4>Feeling/ activity</h4>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
 
-
-
+            <div id="chat-toggle" onclick="toggleChat()">💬</div>
+            <!-- chat -->
+            <div class="chat-container" id="chat-box" style="display: none;">
+                <div class="chat-header">
+                    Gemini Chat
+                    <span onclick="toggleChat()" style="float: right; cursor: pointer;">×</span>
+                </div>
+                <div class="chat-messages" id="chat-messages"></div>
+                <div class="chat-input">
+                    <chat-input__input>
+                        <input type="text" id="chat-input" placeholder="type your message here..." />
+                    </chat-input__input>
+                    <div class="input__input__button">
+                        <button onclick="sendMessage()">send</button>
+                    </div>
+                </div>
+            </div>
             <!-- </div> -->
             <!-- were i show the posts from server  -->
             <div id="postsContainer"></div>
 
         </section>
-
-
-        <section class="right">
-            <div class="container">
-
-
-                <!-- chat  -->
-                <!-- <div class="chat-container ">
+        <!-- <section class="right">
+            <div class="container"> 
+                chat 
+                <div class="chat-container ">
                     <div class="chat-header">Gemini Chat</div>
                     <div class="chat-messages" id="chat-messages"></div>
                     <div class="chat-input">
                         <input type="text" id="chat-input" placeholder="type your message here..." />
                         <button onclick="sendMessage()">send</button>
                     </div>
-                </div> -->
-                <!-- open chatpot  -->
-                <div id="chat-toggle" onclick="toggleChat()">💬</div>
-
-                <!-- chat -->
-                <div class="chat-container" id="chat-box" style="display: none;">
-                    <div class="chat-header">
-                        Gemini Chat
-                        <span onclick="toggleChat()" style="float: right; cursor: pointer;">×</span>
-                    </div>
-                    <div class="chat-messages" id="chat-messages"></div>
-                    <div class="chat-input">
-                        <input type="text" id="chat-input" placeholder="type your message here..." />
-                        <button onclick="sendMessage()">send</button>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
+                </div>      
+        </section> -->
     </main>
-
-    <!-- ====== Popup Modal ====== -->
+    <!-- ====== Popup ====== -->
     <div class="popup-overlay" id="postPopup">
         <div class="popup-card">
             <span class="close-btn" id="closePopup">&times;</span>
@@ -215,12 +180,6 @@
             <button id="submitPost">Post</button>
         </div>
     </div>
-
-
-
-
-
-
     <script src="../js/home.js"></script>
 </body>
 
