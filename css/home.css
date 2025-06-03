@@ -50,7 +50,9 @@ body {
     align-items: center;
     gap: 10px;
 }
-
+.logo{
+    width: 2rem;
+}
 .logo img {
     height: 40px;
 }
@@ -183,7 +185,7 @@ body {
 }
 
 .userphoto {
-    width: 7%;
+    width: 2rem;
 }
 
 .newpost_input {
@@ -364,6 +366,12 @@ body {
 .add-comment {
     width: 100%;
     display: block;
+}
+.comments-container p{
+    border-radius: 1rem;
+    padding: 12px;
+    background-color: #e8e8e8;
+    margin: 12px;
 }
 
 /* ///////////////////////////////////right//////////////////////  */
